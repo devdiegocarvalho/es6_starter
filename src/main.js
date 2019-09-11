@@ -18,7 +18,7 @@ class App {
   setLoading(loading = true) {
     if (loading === true) {
       let loadingEl = document.createElement("span");
-      loadingEl.appendChild(document.createTextNode("Carregando"));
+      loadingEl.appendChild(document.createTextNode("Loading..."));
       loadingEl.setAttribute("id", "loading");
 
       this.formEl.appendChild(loadingEl);
@@ -57,7 +57,7 @@ class App {
 
       this.render();
     } catch (err) {
-      alert("O repositório não existe!");
+      alert("Repository not found!");
       this.inputEl.value = "";
     }
 
@@ -80,7 +80,7 @@ class App {
       let linkEl = document.createElement("a");
       linkEl.setAttribute("target", "_blank");
       linkEl.setAttribute("href", repo.html_url);
-      linkEl.appendChild(document.createTextNode("Acessar"));
+      linkEl.appendChild(document.createTextNode("Access"));
 
       let listItemEl = document.createElement("li");
       listItemEl.appendChild(imgEl);
